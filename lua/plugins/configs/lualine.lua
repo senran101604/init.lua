@@ -217,5 +217,14 @@ ins_right {
   padding = { left = 1 },
 }
 
+-- Add components to inactive left sections
+config.inactive_sections.lualine_c = {
+  {
+    'filename',
+    cond = conditions.buffer_not_empty,
+    color = { fg = colors.magenta },
+  },
+}
+
 -- Now don't forget to initialize lualine
 lualine.setup(config)
