@@ -14,8 +14,12 @@
 local opt = vim.opt
 local g = vim.g
 -- General Options --------------------------------------------------------------
--- Enables mouse support in normal mode and visual mode.
-opt.mouse = 'a'
+-- Encoding
+vim.scriptencoding = "utf-8"
+vim.opt.encoding = "utf-8"
+vim.opt.fileencoding = "utf-8"
+-- Disable mouse support
+opt.mouse = ""
 -- Automatically detects and sets the filetype.
 opt.filetype = 'on'
 -- Enables syntax highlighting.
@@ -88,6 +92,7 @@ else
   opt.showcmd = true
 end
 -- Tabs and Indentation ----------------------------------------------------------
+vim.opt.smarttab = true
 -- Disables swap files.
 opt.swapfile = false
 -- Sets the number of spaces a tab is equal to.
