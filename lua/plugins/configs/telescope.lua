@@ -1,7 +1,12 @@
 -- Pickers customization
 require('telescope').setup{
   defaults = {
-    -- ...
+    layout_config = {
+        -- Display the prompt at the top.
+        prompt_position = "top",
+    },
+    -- Display result from top to bottom
+    sorting_strategy = "ascending",
   },
   pickers = {
     builtin = {
@@ -13,8 +18,12 @@ require('telescope').setup{
         previewer = false,
     },
     oldfiles = {
-        prompt_title = "History Files"
-    }
+        prompt_title = "History Files",
+        wrap_results = true,
+    },
+    commands = {
+        theme = "dropdown",
+    },
   },
   -- Extensions
   extensions = {
