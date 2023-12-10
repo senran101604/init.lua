@@ -20,6 +20,7 @@ require('telescope').setup{
     oldfiles = {
         prompt_title = "History Files",
         wrap_results = true,
+        cwd = '~', -- Set the current working directory to '~'
     },
     commands = {
         theme = "dropdown",

@@ -29,15 +29,15 @@ require("lazy").setup({
   -- Colorschemes
   'nanotech/jellybeans.vim',
   'savq/melange-nvim',
-  -- Fun: Cellular automaton in Neovim
+  -- Fun: Cellular Automaton in Neovim
   'eandrju/cellular-automaton.nvim',
   -- Colorizer
   'norcalli/nvim-colorizer.lua',
   -- Floating Terminal
   'voldikss/vim-floaterm',
-  -- Neovim plugin for a code outline window with Telescope integration
+  -- Neovim plugin for a code outline window with Telescope integration.
   'stevearc/aerial.nvim',
-  -- File Explorer:  Edit your filesystem like a buffer
+  -- File Explorer:  Edit your filesystem like a buffer.
   'stevearc/oil.nvim',
   -- Telescope file browser
   'nvim-telescope/telescope-file-browser.nvim',
@@ -85,9 +85,6 @@ require("lazy").setup({
   -- Commenter
   {
       'numToStr/Comment.nvim',
-      opts = {
-          -- add any options here
-      },
       lazy = false,
   },
 
@@ -124,6 +121,7 @@ require("lazy").setup({
       -- 'folke/neodev.nvim',
     },
   },
+  -- ( Add, Delete, Change ) Surrounding pairs pretty easily.
   {
     "kylechui/nvim-surround",
     version = "*", -- Use for stability; omit to use `main` branch for the latest features

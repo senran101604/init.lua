@@ -1,11 +1,3 @@
--- Define floaterm mappings
-vim.keymap.set('n', '<leader>tn', ':FloatermNew! cd %:p:h<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<leader>tt', ':FloatermToggle<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<leader>ts', ':FloatermShow<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<leader>th', ':FloatermHide<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<leader>t1', ':FloatermPrev<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<leader>t2', ':FloatermNext<CR>', { noremap = true, silent = true })
-
 -- Conditional mappings based on file type
 -- Note: Lua doesn't have direct support for filetype conditionals in this context
 -- You might need to handle this differently based on your specific needs
@@ -21,3 +13,11 @@ end
 vim.g.floaterm_width = 0.9
 vim.g.floaterm_height = 0.9
 vim.g.floaterm_titleposition = 'center'
+
+-- Define floaterm mappings
+vim.keymap.set('n', '<leader>tn', ':FloatermNew! cd %:p:h<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>tt', ':FloatermToggle<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>ts', ':FloatermShow<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>th', ':FloatermHide<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>t1', ':FloatermPrev<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>t2', ':FloatermNext<CR>', { noremap = true, silent = true })
