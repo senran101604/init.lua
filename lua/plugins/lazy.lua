@@ -35,10 +35,15 @@ require("lazy").setup({
   'norcalli/nvim-colorizer.lua',
   -- Floating Terminal
   'voldikss/vim-floaterm',
-  -- Neovim plugin for a code outline window with Telescope integration.
-  'stevearc/aerial.nvim',
   -- File Explorer:  Edit your filesystem like a buffer.
   'stevearc/oil.nvim',
+  -- Distraction-free coding for Neovim, Goyo and Limelight replacement ( lua version )
+  {
+    'folke/zen-mode.nvim',
+    dependencies = {
+        "folke/twilight.nvim",
+    },
+  },
   -- Telescope file browser
   'nvim-telescope/telescope-file-browser.nvim',
   {
@@ -121,6 +126,7 @@ require("lazy").setup({
       -- 'folke/neodev.nvim',
     },
   },
+
   -- ( Add, Delete, Change ) Surrounding pairs pretty easily.
   {
     "kylechui/nvim-surround",
