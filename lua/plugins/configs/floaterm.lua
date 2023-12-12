@@ -15,7 +15,8 @@ vim.g.floaterm_height = 0.9
 vim.g.floaterm_titleposition = 'center'
 
 -- Define floaterm mappings
-vim.keymap.set('n', '<leader>tn', ':FloatermNew! cd %:p:h<CR>', { noremap = true, silent = true })
+-- vim.keymap.set('n', '<leader>tn', ':FloatermNew! cd %:p:h<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>tn', ':FloatermNew<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>tt', ':FloatermToggle<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>ts', ':FloatermShow<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>th', ':FloatermHide<CR>', { noremap = true, silent = true })
