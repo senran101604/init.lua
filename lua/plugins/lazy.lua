@@ -29,6 +29,7 @@ require("lazy").setup({
   -- Colorschemes
   'nanotech/jellybeans.vim',
   'savq/melange-nvim',
+  'EdenEast/nightfox.nvim',
   -- Fun: Cellular Automaton in Neovim
   'eandrju/cellular-automaton.nvim',
   -- Colorizer
@@ -103,6 +104,11 @@ require("lazy").setup({
         vim.g.vimwiki_list = {
             {
                 path = "~/vimwiki/coding_md",
+                syntax = "markdown",
+                ext = ".md",
+            },
+            {
+                path = "~/vimwiki/rain",
                 syntax = "markdown",
                 ext = ".md",
             },
