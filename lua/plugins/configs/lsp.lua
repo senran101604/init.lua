@@ -1,12 +1,13 @@
 require("mason").setup()
 require("mason-lspconfig").setup {
-  ensure_installed = { "lua_ls", "rust_analyzer", "pyright"},
+  ensure_installed = { "lua_ls", "rust_analyzer", "pyright", "bashls"},
 }
 
 -- Setup language servers.
 local lspconfig = require('lspconfig')
-lspconfig.pyright.setup {}
 lspconfig.lua_ls.setup {}
+lspconfig.pyright.setup {}
+lspconfig.bashls.setup {}
 
 lspconfig.rust_analyzer.setup{
 settings = {
