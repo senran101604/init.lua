@@ -2,6 +2,8 @@
 require('telescope').setup{
   defaults = {
     layout_config = {
+        width = 0.9,
+        height = 0.9,
         -- Display the prompt at the top.
         prompt_position = "top",
         preview_cutoff = 0,
