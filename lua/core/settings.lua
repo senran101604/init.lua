@@ -30,7 +30,7 @@ opt.hidden = true
 opt.backup = false
 opt.writebackup = false
 -- Sets the command-line height to 2.
-opt.cmdheight = 2
+opt.cmdheight = 1
 -- Disables cursorline.
 opt.cursorline = false
 -- Sets the time in milliseconds for CursorHold events.
@@ -127,12 +127,13 @@ opt.autowrite = true
 -- Command/History ---------------------------------------------------------------
 -- Sets the maximum number of entries in the command-line history.
 opt.history = 200
-
 -- Conceal Cursor Configuration for Vimwiki
 -- to avoid expanding links when hovering.
 opt.concealcursor= 'nc'
+-- ColorColumn
 
 -- Uncomment the following lines if needed:
+-- opt.colorcolumn = '80'
 -- opt.completeopt = 'menuone,noinsert,noselect' -- Smart Completion
 -- opt.wildmenu = true -- Wildmenu
 -- opt.wildmode = 'list:longest' -- Wildmenu
