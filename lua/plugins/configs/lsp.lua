@@ -3,20 +3,32 @@ require("mason-lspconfig").setup {
   ensure_installed = { "lua_ls", "rust_analyzer", "pyright", "bashls"},
 }
 
+-- nvim-cmp supports additional completion capabilities, so broadcast that to servers
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+
 -- Setup language servers.
 local lspconfig = require('lspconfig')
-lspconfig.lua_ls.setup {}
-lspconfig.pyright.setup {}
-lspconfig.bashls.setup {}
+lspconfig.lua_ls.setup {
+  capabilities = capabilities
+}
+
+lspconfig.pyright.setup {
+  capabilities = capabilities
+}
+lspconfig.bashls.setup {
+  capabilities = capabilities
+}
 
 lspconfig.rust_analyzer.setup{
-settings = {
+  settings = {
      ['rust-analyzer'] = {
        diagnostics = {
          enable = false;
        }
      }
-    }
+    },
+  capabilities = capabilities
 }
 
 -- Global mappings.
@@ -62,5 +74,44 @@ vim.api.nvim_create_autocmd('LspAttach', {
 -- vim.diagnostic.config({virtual_text = false})
 -- Disable signs
 -- vim.diagnostic.config({signs = false})
--- Disable Diagnostics it completely
+-- Disable Inline Diagnostics it completely
 vim.diagnostic.disable()
+
+-- CMP Completion
+-- [[ Configure nvim-cmp ]]
+-- See `:help cmp`
+local cmp = require 'cmp'
+cmp.setup {
+  completion = {
+    completeopt = 'menu,menuone,noinsert',
+  },
+  mapping = cmp.mapping.preset.insert {
+    ['<C-n>'] = cmp.mapping.select_next_item(),
+    ['<C-p>'] = cmp.mapping.select_prev_item(),
+    ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-Space>'] = cmp.mapping.complete {},
+    -- ['<CR>'] = cmp.mapping.confirm {
+    --   behavior = cmp.ConfirmBehavior.Replace,
+    --   select = true,
+    -- },
+    ['<Tab>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      else
+        fallback()
+      end
+    end, { 'i', 's' }),
+    ['<S-Tab>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_prev_item()
+      else
+        fallback()
+      end
+    end, { 'i', 's' }),
+  },
+  sources = {
+    { name = 'nvim_lsp' },
+    { name = 'path' },
+  },
+}
