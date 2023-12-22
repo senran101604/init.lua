@@ -159,6 +159,12 @@ require("lazy").setup({
             -- Configuration here, or leave empty to use defaults
         })
     end
-  }
+  },
+
+  -- Startup Dashboard
+  {
+      'goolord/alpha-nvim',
+      dependencies = { 'nvim-tree/nvim-web-devicons' },
+  };
 })
 

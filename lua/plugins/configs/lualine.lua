@@ -46,6 +46,8 @@ local config = {
       normal = { c = { fg = colors.fg, bg = colors.bg } },
       inactive = { c = { fg = colors.fg, bg = colors.bg } },
     },
+  -- Filetypes to disable lualine for.
+  disabled_filetypes = {'alpha'},
   },
   sections = {
     -- these are to remove the defaults
