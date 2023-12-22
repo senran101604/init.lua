@@ -30,13 +30,13 @@ vim.api.nvim_exec([[
 ]], false)
 
 -- Set line numbering based on mode
-vim.api.nvim_exec([[
-  augroup LineNumberSettings
-    autocmd!
-    autocmd InsertEnter * set norelativenumber
-    autocmd InsertLeave * set relativenumber
-  augroup END
-]], false)
+-- vim.api.nvim_exec([[
+--   augroup LineNumberSettings
+--     autocmd!
+--     autocmd InsertEnter * set norelativenumber
+--     autocmd InsertLeave * set relativenumber
+--   augroup END
+-- ]], false)
 
 -- Disable Cursorline on Inactive Windows
 vim.api.nvim_exec([[
