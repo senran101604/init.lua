@@ -27,9 +27,7 @@ vim.opt.rtp:prepend(lazypath)
 -- Plugins
 require("lazy").setup({
   -- Colorschemes
-  'nanotech/jellybeans.vim',
   'savq/melange-nvim',
-  'EdenEast/nightfox.nvim',
   'ellisonleao/gruvbox.nvim',
 
   -- Fun: Cellular Automaton in Neovim

@@ -11,13 +11,6 @@ if current_colorscheme == "melange" then
     vim.cmd("hi ColorColumn guibg=None")
     vim.cmd("hi String gui=None")
     vim.cmd("hi Comment gui=None")
--- TeraFox from nightfox.nvim
-elseif current_colorscheme == "terafox" then
-    -- vim.cmd("hi Normal guibg=#151515")
-    vim.cmd("hi Normal guibg=None")
-    vim.cmd("hi CursorLine guibg=None")
-    vim.cmd("hi String gui=None")
-    vim.cmd("hi! link NormalNC Normal")
 elseif current_colorscheme == "gruvbox" then
     -- vim.cmd("hi Normal guibg=#151515")
     vim.cmd("hi Normal guibg=None")
