@@ -29,8 +29,8 @@ opt.hidden = true
 -- Disables backup and writebackup files.
 opt.backup = false
 opt.writebackup = false
--- Sets the command-line height to 2.
-opt.cmdheight = 1
+-- Sets the command-line size default = 1.
+-- opt.cmdheight = 1
 -- Disables cursorline.
 opt.cursorline = false
 -- Sets the time in milliseconds for CursorHold events.

@@ -39,10 +39,10 @@ vim.api.nvim_exec([[
 -- ]], false)
 
 -- Disable Cursorline on Inactive Windows
-vim.api.nvim_exec([[
-  augroup DynamicCursorline
-    autocmd!
-    autocmd WinEnter * set cursorline
-    autocmd WinLeave * set nocursorline
-  augroup END
-]], false)
+-- vim.api.nvim_exec([[
+--   augroup DynamicCursorline
+--     autocmd!
+--     autocmd WinEnter * set cursorline
+--     autocmd WinLeave * set nocursorline
+--   augroup END
+-- ]], false)
