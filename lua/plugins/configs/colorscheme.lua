@@ -1,4 +1,5 @@
-vim.cmd.colorscheme 'melange'
+-- Highlighting Configurations
+vim.cmd.colorscheme 'gruvbox'
 
 local current_colorscheme = vim.g.colors_name
 
@@ -11,6 +12,7 @@ if current_colorscheme == "melange" then
     vim.cmd("hi ColorColumn guibg=None")
     vim.cmd("hi String gui=None")
     vim.cmd("hi Comment gui=None")
+
 elseif current_colorscheme == "gruvbox" then
     -- vim.cmd("hi Normal guibg=#151515")
     vim.cmd("hi Normal guibg=None")
@@ -23,3 +25,13 @@ elseif current_colorscheme == "gruvbox" then
     vim.cmd("hi! link FloatBorder GruvboxGray")
 end
 
+-- Vimwiki Support
+vim.cmd("hi VimwikiHeader1 guifg=#FF6B81 gui=bold")
+vim.cmd("hi VimwikiHeader2 guifg=#86C990 gui=bold")
+vim.cmd("hi VimwikiHeader3 guifg=#7EA2F2 gui=bold")
+vim.cmd("hi VimwikiHeader4 guifg=#B48EAD gui=bold")
+vim.cmd("hi VimwikiHeader5 guifg=#6DC4CE gui=bold")
+vim.cmd("hi VimwikiHeader6 guifg=#E5C07B gui=bold")
+vim.cmd("hi VimwikiPre     guifg=#A9C388 gui=bold")
+
+vim.cmd("hi Underlined guifg=#D9CAB3 gui=bold,underline")
