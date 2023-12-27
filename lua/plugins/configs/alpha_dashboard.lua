@@ -3,6 +3,7 @@ local alpha = require("alpha")
 local dashboard = require("alpha.themes.dashboard")
 
 dashboard.section.header.val = {
+    [[                                                                       ]],
     [[                                                                     ]],
     [[       ████ ██████           █████      ██                     ]],
     [[      ███████████             █████                             ]],
@@ -11,6 +12,7 @@ dashboard.section.header.val = {
     [[    █████████ ██████████ █████████ █████ █████ ████ █████   ]],
     [[  ███████████ ███    ███ █████████ █████ █████ ████ █████  ]],
     [[ ██████  █████████████████████ ████ █████ █████ ████ ██████ ]],
+    [[                                                                       ]],
 }
 
 dashboard.section.buttons.val = {
@@ -22,8 +24,11 @@ dashboard.section.buttons.val = {
 }
 
 dashboard.section.footer.val = "Programming is an art of patience not talent"
-dashboard.section.header.opts.hl = "Statement"
-dashboard.section.footer.opts.hl = "Operator"
+dashboard.section.header.opts.hl = "Operator"
+dashboard.section.footer.opts.hl = "Function"
 
 dashboard.opts.opts.noautocmd = true
 alpha.setup(dashboard.opts)
+
+-- Keymap
+vim.keymap.set('n', '<leader>A', ':Alpha <CR>', { noremap = true, silent = true })
