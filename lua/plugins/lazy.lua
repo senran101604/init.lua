@@ -31,14 +31,19 @@ require("lazy").setup({
   'savq/melange-nvim',
   'EdenEast/nightfox.nvim',
   'ellisonleao/gruvbox.nvim',
+
   -- Fun: Cellular Automaton in Neovim
   'eandrju/cellular-automaton.nvim',
+
   -- Colorizer
   'norcalli/nvim-colorizer.lua',
+
   -- Floating Terminal
   'voldikss/vim-floaterm',
+
   -- File Explorer:  Edit your filesystem like a buffer.
   'stevearc/oil.nvim',
+
   -- Distraction-free coding for Neovim, Goyo and Limelight replacement ( lua version )
   {
     'folke/zen-mode.nvim',
@@ -46,6 +51,7 @@ require("lazy").setup({
         "folke/twilight.nvim",
     },
   },
+
   -- Telescope file browser
   'nvim-telescope/telescope-file-browser.nvim',
   {
@@ -56,6 +62,7 @@ require("lazy").setup({
           'nvim-lua/plenary.nvim',
       }
     },
+
 
   {
     -- Highlight, edit, and navigate code
@@ -70,15 +77,6 @@ require("lazy").setup({
  {
     -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
-    -- See `:help lualine.txt`
-    -- opts = {
-    --   options = {
-    --     icons_enabled = false,
-    --     -- theme = 'gruvbox',
-    --     component_separators = '|',
-    --     section_separators = '',
-    --   },
-    -- },
   },
 
   -- Markdown Preview
@@ -104,12 +102,12 @@ require("lazy").setup({
         vim.g.vimwiki_folding = ""
         vim.g.vimwiki_list = {
             {
-                path = "~/vimwiki/coding_md",
+                path = "~/.vimwiki/coding_md",
                 syntax = "markdown",
                 ext = ".md",
             },
             {
-                path = "~/vimwiki/rain",
+                path = "~/.vimwiki/rain",
                 syntax = "markdown",
                 ext = ".md",
             },
@@ -161,7 +159,7 @@ require("lazy").setup({
     end
   },
 
-  -- Startup Dashboard
+  -- Startup Alpha Dashboard
   {
       'goolord/alpha-nvim',
       dependencies = { 'nvim-tree/nvim-web-devicons' },
