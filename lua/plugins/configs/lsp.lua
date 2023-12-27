@@ -1,3 +1,4 @@
+------------------------------------------ Mason ------------------------------------------
 require("mason").setup()
 require("mason-lspconfig").setup {
   ensure_installed = { "lua_ls", "rust_analyzer", "pyright", "bashls"},
@@ -7,19 +8,19 @@ require("mason-lspconfig").setup {
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
+------------------------------------------ LSP ------------------------------------------
 -- Setup language servers.
 local lspconfig = require('lspconfig')
+
 lspconfig.lua_ls.setup {
   capabilities = capabilities
 }
-
 lspconfig.pyright.setup {
   capabilities = capabilities
 }
 lspconfig.bashls.setup {
   capabilities = capabilities
 }
-
 lspconfig.rust_analyzer.setup{
   settings = {
      ['rust-analyzer'] = {
@@ -69,19 +70,39 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
--- source: https://github.com/neovim/nvim-lspconfig/issues/662
--- Disable inline diagnostics
+-- LSP Enable borders
+local border = {
+      {"🭽", "FloatBorder"},
+      {"▔", "FloatBorder"},
+      {"🭾", "FloatBorder"},
+      {"▕", "FloatBorder"},
+      {"🭿", "FloatBorder"},
+      {"▁", "FloatBorder"},
+      {"🭼", "FloatBorder"},
+      {"▏", "FloatBorder"},
+}
+-- Override globally
+local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
+
+function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
+  opts = opts or {}
+  opts.border = opts.border or border
+  return orig_util_open_floating_preview(contents, syntax, opts, ...)
+end
 -- vim.diagnostic.config({virtual_text = false})
--- Disable signs
--- vim.diagnostic.config({signs = false})
--- Disable Inline Diagnostics it completely
+-- Disable inline diagnostics
 vim.diagnostic.disable()
 
--- CMP Completion
+
+------------------------------------------ CMP Completion ------------------------------------------
 -- [[ Configure nvim-cmp ]]
 -- See `:help cmp`
 local cmp = require 'cmp'
 cmp.setup {
+  window = {
+    completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
+  },
   completion = {
     completeopt = 'menu,menuone,noinsert',
   },

@@ -1,4 +1,4 @@
-vim.cmd.colorscheme 'gruvbox'
+vim.cmd.colorscheme 'melange'
 
 local current_colorscheme = vim.g.colors_name
 
@@ -14,11 +14,12 @@ if current_colorscheme == "melange" then
 elseif current_colorscheme == "gruvbox" then
     -- vim.cmd("hi Normal guibg=#151515")
     vim.cmd("hi Normal guibg=None")
-    vim.cmd("hi NormalFloat guibg=#282828")
+    vim.cmd("hi NormalFloat guibg=#292522")
     vim.cmd("hi CursorLine guibg=#1d2021")
     vim.cmd("hi Todo guibg=#292522 guifg=#fabd2f")
     vim.cmd("hi Comment gui=None")
     vim.cmd("hi String gui=None")
     vim.cmd("hi! link Function GruvboxGreen")
+    vim.cmd("hi! link FloatBorder GruvboxGray")
 end
 
