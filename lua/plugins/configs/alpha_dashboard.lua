@@ -24,8 +24,9 @@ dashboard.section.buttons.val = {
 }
 
 dashboard.section.footer.val = "Programming is an art of patience not talent"
+
 dashboard.section.header.opts.hl = "Operator"
-dashboard.section.footer.opts.hl = "Function"
+dashboard.section.footer.opts.hl = "String"
 
 dashboard.opts.opts.noautocmd = true
 alpha.setup(dashboard.opts)
