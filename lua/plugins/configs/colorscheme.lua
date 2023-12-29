@@ -15,7 +15,7 @@ elseif current_colorscheme == "gruvbox" then
     -- vim.cmd("hi GruvboxFg1  guifg=#FFD8B1")
     vim.cmd("hi Normal      guifg=#F5F2EB")
     vim.cmd("hi GruvboxFg1  guifg=#F5F2EB")
-    vim.cmd("hi NormalFloat guibg=#292522")
+    vim.cmd("hi NormalFloat guifg=#F5F2EB guibg=#1d2021")
     vim.cmd("hi String      guifg=#DADFAE gui=None")
     vim.cmd("hi CursorLine  guibg=#1d2021")
     vim.cmd("hi Underlined      guifg=#B3CCE3 gui=bold,underline")
