@@ -100,8 +100,12 @@ vim.diagnostic.disable()
 local cmp = require 'cmp'
 cmp.setup {
   window = {
-    completion = cmp.config.window.bordered(),
-    documentation = cmp.config.window.bordered(),
+    completion = cmp.config.window.bordered({
+        winhighlight = "Normal:Normal,CursorLine:PmenuSel",
+    }),
+    documentation = cmp.config.window.bordered({
+        border = "double",
+    })
   },
   completion = {
     completeopt = 'menu,menuone,noinsert',
