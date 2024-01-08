@@ -79,18 +79,10 @@ opt.updatetime = 50
 opt.wrap = false
 -- Terminal Colors ----------------------------------------------------------------
 -- Configures terminal-related settings based on Neovim or Vim.
-if vim.fn.has('nvim') then
-  opt.ruler = false
-  opt.showmode = false
-  opt.showcmd = true
-  -- Enables true colors in the terminal if supported.
-  if vim.fn.has("termguicolors") then
-    opt.termguicolors = true
-  end
-else
-  opt.ruler = true
-  opt.showcmd = true
-end
+opt.ruler = false
+opt.showmode = false
+opt.showcmd = true
+opt.termguicolors = true
 -- Tabs and Indentation ----------------------------------------------------------
 vim.opt.smarttab = true
 -- Disables swap files.
@@ -133,7 +125,7 @@ opt.concealcursor= 'nc'
 -- ColorColumn
 
 -- Uncomment the following lines if needed:
--- opt.colorcolumn = '80'
+opt.colorcolumn = '80'
 -- opt.completeopt = 'menuone,noinsert,noselect' -- Smart Completion
 -- opt.wildmenu = true -- Wildmenu
 -- opt.wildmode = 'list:longest' -- Wildmenu
