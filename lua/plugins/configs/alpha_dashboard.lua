@@ -23,7 +23,7 @@ dashboard.section.buttons.val = {
     dashboard.button( "q", "󰅚  Quit NVIM" , ":qa<CR>"),
 }
 
-dashboard.section.footer.val = "Programming is an art of patience not talent"
+dashboard.section.footer.val = "Do More by Doing Less"
 
 dashboard.section.header.opts.hl = "Operator"
 dashboard.section.footer.opts.hl = "String"
