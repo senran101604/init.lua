@@ -16,8 +16,8 @@ elseif current_colorscheme == "gruvbox" then
     vim.cmd("hi Normal          guifg=#F5F2EB")
     vim.cmd("hi GruvboxFg1      guifg=#F5F2EB")
     vim.cmd("hi PmenuSel        guibg=#FFA07A")
-    vim.cmd("hi Underlined      guifg=#B3CCE3 gui=bold,underline")
-    vim.cmd("hi String          guifg=#DADFAE gui=None")
+    vim.cmd("hi Underlined      guifg=#B3CCE3   gui=bold,underline")
+    vim.cmd("hi String          guifg=#DADFAE   gui=None")
     vim.cmd("hi ColorColumn     guibg=#292522")
     vim.cmd("hi textSnipTEX     guifg=#FFD8B1")
     -- Gruvbox Colors Customization
