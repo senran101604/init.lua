@@ -72,3 +72,6 @@ keymap.set('n', '<C-D>', '<C-E><C-E><C-E>', opts)
 -- Save and Reload ==============================================
 -- Reload Vim configuration
 keymap.set('n', '<C-s>', ':so $MYVIMRC<CR>', { noremap = true })
+
+-- Fast Toggle Colorcolumn
+keymap.set('n', '<leader>cl', ':execute "set colorcolumn=" . (&colorcolumn == "" ? "80" : "")<CR>', { noremap = true, silent=true})
