@@ -28,7 +28,8 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   -- Colorschemes
   'savq/melange-nvim',
-  'ellisonleao/gruvbox.nvim',
+  { "ellisonleao/gruvbox.nvim",             priority = 1000 },
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 
   -- Fun: Cellular Automaton in Neovim
   'eandrju/cellular-automaton.nvim',
