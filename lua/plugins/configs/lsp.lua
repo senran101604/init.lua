@@ -21,7 +21,7 @@ lspconfig.pyright.setup {
 lspconfig.bashls.setup {
   capabilities = capabilities
 }
-lspconfig.rust_analyzer.setup{
+lspconfig.rust_analyzer.setup {
   settings = {
      ['rust-analyzer'] = {
        diagnostics = {
