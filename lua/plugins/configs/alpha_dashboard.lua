@@ -4,7 +4,7 @@ local dashboard = require("alpha.themes.dashboard")
 
 local ascii_arts = require("plugins.configs.ascii_arts")
 
-dashboard.section.header.val = ascii_arts.blooming_bird
+dashboard.section.header.val = ascii_arts.gojo
 
 dashboard.section.buttons.val = {
     dashboard.button("SPC f h", "🕒 Find History Files"),

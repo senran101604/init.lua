@@ -34,8 +34,6 @@ elseif current_colorscheme == "gruvbox" then
     vim.cmd("hi! link Operator      GruvboxOrange")
 elseif current_colorscheme == "catppuccin-mocha" then
     vim.cmd("hi ColorColumn         guibg=#1d2021")
-    vim.cmd("hi Cursor              guibg=None guifg=None gui=reverse cterm=reverse")
-    vim.cmd("hi Visual              gui=reverse")
     vim.cmd("hi Comment             gui=None")
     vim.cmd("hi Conditional         gui=None")
     vim.cmd("hi! link NormalNC      Normal")
