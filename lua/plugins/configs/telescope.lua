@@ -34,12 +34,7 @@ require('telescope').setup{
   },
   -- Extensions
   extensions = {
-    file_browser = {
-        -- use the "ivy" theme if you want
-        theme = "ivy",
-        prompt_title ="File Explorer",
-        hidden = true,
-    },
+    -- extensions configuration
   },
 }
 
@@ -57,9 +52,3 @@ keymap.set('n', '<leader>fh', builtin.oldfiles, {})
 keymap.set('n', '<leader>f:', builtin.command_history, {})
 keymap.set('n', '<leader>fs', builtin.colorscheme, {})
 keymap.set('n', '<leader>fa', ":Telescope  treesitter<CR>", { noremap=true, silent = true })
-
-
--- Load Extensions Extensions
-require('telescope').load_extension('file_browser')
--- Telescope File Browser
-keymap.set('n', '<leader>fe', ":Telescope file_browser path=%:p:h select_buffer=true<CR>", { silent = true })

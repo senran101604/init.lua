@@ -51,8 +51,6 @@ require("lazy").setup({
     },
   },
 
-  -- Telescope file browser
-  'nvim-telescope/telescope-file-browser.nvim',
   {
     -- Fuzzy finder for Neovim
     'nvim-telescope/telescope.nvim', tag = '0.1.5',
