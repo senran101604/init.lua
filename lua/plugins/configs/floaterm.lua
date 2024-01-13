@@ -23,4 +23,4 @@ vim.keymap.set('n', '<leader>th', ':FloatermHide<CR>', { noremap = true, silent 
 vim.keymap.set('n', '<leader>t1', ':FloatermPrev<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>t2', ':FloatermNext<CR>', { noremap = true, silent = true })
 --  Ranger
-vim.api.nvim_set_keymap('n', '<leader>fe', ":FloatermNew ranger<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>fe', ":FloatermNew --title='Ranger' ranger<CR>", { noremap = true, silent = true })
