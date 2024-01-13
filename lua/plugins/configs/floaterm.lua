@@ -3,7 +3,7 @@
 -- You might need to handle this differently based on your specific needs
 
 -- Don't enter insert mode when floaterm is loaded
-vim.g.floaterm_autoinsert = false
+vim.g.floaterm_autoinsert = true
 
 -- Set PowerShell as the terminal if the OS is Windows 10
 if vim.fn.has("win32") == 1 then
@@ -22,3 +22,5 @@ vim.keymap.set('n', '<leader>ts', ':FloatermShow<CR>', { noremap = true, silent 
 vim.keymap.set('n', '<leader>th', ':FloatermHide<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>t1', ':FloatermPrev<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>t2', ':FloatermNext<CR>', { noremap = true, silent = true })
+--  Ranger
+vim.api.nvim_set_keymap('n', '<leader>fe', ":FloatermNew ranger<CR>", { noremap = true, silent = true })
