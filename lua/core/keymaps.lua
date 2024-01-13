@@ -27,15 +27,7 @@ keymap.set('n', '<M-l>', ':vertical resize -1<CR>', opts)
 keymap.set('n', '<M-h>', ':vertical resize +1<CR>', opts)
 
 -- Terminal Specific =============================================
-keymap.set('t', 'jk', '<C-\\><C-n>', opts)
-keymap.set('t', 'kj', '<C-\\><C-n>', opts)
-
--- Escaping!
-keymap.set('i', 'jk', '<Esc>', opts)
-keymap.set('i', 'kj', '<Esc>', opts)
-keymap.set('c', 'jk', '<C-c>', opts)
-keymap.set('c', 'kj', '<C-c>', opts)
-keymap.set('n', '<C-c>', '<Esc>', opts)
+keymap.set('t', '<C-[>', '<C-\\><C-n>', opts)
 
 -- Clear search highlighting
 keymap.set('n', '<leader>,', ':noh<CR>', opts)
