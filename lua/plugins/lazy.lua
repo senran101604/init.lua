@@ -99,12 +99,12 @@ require("lazy").setup({
         vim.g.vimwiki_folding = ""
         vim.g.vimwiki_list = {
             {
-                path = "~/.vimwiki/coding_md",
+                path = "~/.vault/work",
                 syntax = "markdown",
                 ext = ".md",
             },
             {
-                path = "~/.vimwiki/rain",
+                path = "~/.vault/rain",
                 syntax = "markdown",
                 ext = ".md",
             },

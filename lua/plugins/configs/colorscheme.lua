@@ -34,18 +34,21 @@ elseif current_colorscheme == "gruvbox" then
     vim.cmd("hi! link Operator      GruvboxOrange")
 elseif current_colorscheme == "catppuccin-mocha" then
     vim.cmd("hi ColorColumn         guibg=#1d2021")
+    vim.cmd("hi Underlined          guifg=#cba6f7")
     vim.cmd("hi Comment             gui=None")
     vim.cmd("hi Conditional         gui=None")
     vim.cmd("hi! link NormalNC      Normal")
 end
 
 -- Vimwiki Support
-vim.cmd("hi VimwikiHeader1 guifg=#FF6B81 gui=bold")
-vim.cmd("hi VimwikiHeader2 guifg=#86C990 gui=bold")
-vim.cmd("hi VimwikiHeader3 guifg=#7EA2F2 gui=bold")
-vim.cmd("hi VimwikiHeader4 guifg=#B48EAD gui=bold")
-vim.cmd("hi VimwikiHeader5 guifg=#6DC4CE gui=bold")
-vim.cmd("hi VimwikiHeader6 guifg=#E5C07B gui=bold")
+vim.cmd("hi VimwikiHeader1          guifg=#FF6B81 gui=bold")
+vim.cmd("hi VimwikiHeader2          guifg=#86C990 gui=bold")
+vim.cmd("hi VimwikiHeader3          guifg=#7EA2F2 gui=bold")
+vim.cmd("hi VimwikiHeader4          guifg=#B48EAD gui=bold")
+vim.cmd("hi VimwikiHeader5          guifg=#6DC4CE gui=bold")
+vim.cmd("hi VimwikiHeader6          guifg=#E5C07B gui=bold")
+vim.cmd("hi VimwikiListTodo         guifg=#89b4fa")
+vim.cmd("hi VimwikiHeaderChar       guifg=#fab387")
 -- vim.cmd("hi VimwikiHeader1 guifg=#FB4934 gui=bold")
 -- vim.cmd("hi VimwikiHeader2 guifg=#fabd2f gui=bold")
 -- vim.cmd("hi VimwikiHeader3 guifg=#B8BB26 gui=bold")
