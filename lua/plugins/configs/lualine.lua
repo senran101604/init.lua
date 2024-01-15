@@ -1,24 +1,67 @@
--- Eviline config for lualine
--- Author: shadmansaleh
--- Credit: glepnir
 local lualine = require('lualine')
 
+local current_colorscheme = vim.g.colors_name
+local colors
+
 -- Color table for highlights
--- stylua: ignore
-local colors = {
-  -- bg       = '#282828',
-  bg       = '#1e1e2e',
-  fg       = '#bbc2cf',
-  yellow   = '#ECBE7B',
-  cyan     = '#008080',
-  darkblue = '#081633',
-  green    = '#98be65',
-  orange   = '#FF8800',
-  violet   = '#a9a1e1',
-  magenta  = '#c678dd',
-  blue     = '#51afef',
-  red      = '#ec5f67',
-}
+if current_colorscheme == 'melange' then
+    colors = {
+      bg       = '#292522',
+      fg       = '#ECE1D7',
+      yellow   = '#EBC06D',
+      cyan     = '#7B9695',
+      darkblue = '#273142',
+      green    = '#78997A',
+      orange   = '#E49B5D',
+      violet   = '#a9a1e1',
+      magenta  = '#B380B0',
+      blue     = '#7F91B2',
+      red      = '#D47766',
+    }
+elseif current_colorscheme == 'grubox' then
+    colors = {
+      bg       = '#282828',
+      fg       = '#fbf1c7',
+      yellow   = '#fabd2f',
+      cyan     = '#7B9695',
+      darkblue = '#081633',
+      green    = '#b8bb26',
+      orange   = '#fe8019',
+      violet   = '#b16286',
+      magenta  = '#8f3f71',
+      blue     = '#83a598',
+      red      = '#fb4934',
+    }
+elseif current_colorscheme == 'catppuccin-mocha' then
+    colors = {
+      bg       = '#1e1e2e',
+      fg       = '#cdd6f4',
+      yellow   = '#f9e2af',
+      cyan     = '#89dceb',
+      darkblue = '#081633',
+      green    = '#a6e3a1',
+      orange   = '#fab387',
+      violet   = '#f5c2e7',
+      magenta  = '#cba6f7',
+      blue     = '#89b4fa',
+      red      = '#f38ba8',
+    }
+else
+    colors = {
+      bg       = '#282828',
+      fg       = '#bbc2cf',
+      yellow   = '#ECBE7B',
+      cyan     = '#008080',
+      darkblue = '#081633',
+      green    = '#98be65',
+      orange   = '#FF8800',
+      violet   = '#a9a1e1',
+      magenta  = '#c678dd',
+      blue     = '#51afef',
+      red      = '#ec5f67',
+    }
+end
+
 
 local conditions = {
   buffer_not_empty = function()
