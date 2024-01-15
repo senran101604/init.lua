@@ -1,5 +1,5 @@
 -- Highlighting Configurations
-vim.cmd.colorscheme 'melange'
+vim.cmd.colorscheme 'catppuccin-mocha'
 
 local current_colorscheme = vim.g.colors_name
 
@@ -36,7 +36,7 @@ vim.cmd("hi VimwikiHeader3          guifg=#7EA2F2 gui=bold")
 vim.cmd("hi VimwikiHeader4          guifg=#B48EAD gui=bold")
 vim.cmd("hi VimwikiHeader5          guifg=#6DC4CE gui=bold")
 vim.cmd("hi VimwikiHeader6          guifg=#E5C07B gui=bold")
-vim.cmd("hi VimwikiListTodo         guifg=#89b4fa")
+vim.cmd("hi VimwikiListTodo         guifg=#D47766")
 vim.cmd("hi VimwikiHeaderChar       guifg=#fab387")
 -- vim.cmd("hi VimwikiHeader1 guifg=#FB4934 gui=bold")
 -- vim.cmd("hi VimwikiHeader2 guifg=#fabd2f gui=bold")
