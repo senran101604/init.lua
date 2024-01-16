@@ -18,19 +18,19 @@ if current_colorscheme == 'melange' then
       blue     = '#7F91B2',
       red      = '#D47766',
     }
-elseif current_colorscheme == 'grubox' then
+elseif current_colorscheme == 'gruvbox' then
     colors = {
-      bg       = '#282828',
-      fg       = '#fbf1c7',
-      yellow   = '#fabd2f',
-      cyan     = '#7B9695',
+      bg       = '#1d2021',
+      fg       = '#F5F2EB',
+      yellow   = '#E5C07B',
+      cyan     = '#6DC4CE',
       darkblue = '#081633',
-      green    = '#b8bb26',
-      orange   = '#fe8019',
+      green    = '#a9c388',
+      orange   = '#ffa07a',
       violet   = '#b16286',
-      magenta  = '#8f3f71',
-      blue     = '#83a598',
-      red      = '#fb4934',
+      magenta  = '#d3869b',
+      blue     = '#b3cce3',
+      red      = '#ff6666',
     }
 elseif current_colorscheme == 'catppuccin-mocha' then
     colors = {

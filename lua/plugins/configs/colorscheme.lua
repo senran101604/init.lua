@@ -1,5 +1,5 @@
 -- Highlighting Configurations
-vim.cmd.colorscheme 'catppuccin-mocha'
+vim.cmd.colorscheme 'melange'
 
 local current_colorscheme = vim.g.colors_name
 
@@ -48,7 +48,7 @@ vim.cmd("hi VimwikiHeaderChar       guifg=#fab387")
 
 vim.cmd("hi Todo                guibg=#292522 guifg=#d4b55e")
 vim.cmd("hi Normal              guibg=None")
-vim.cmd("hi Underlined          guifg=#cba6f7")
+vim.cmd("hi Underlined          guifg=#cba6f7 gui=underline")
 vim.cmd("hi ColorColumn         guibg=#1d2021")
 vim.cmd("hi Comment             gui=None")
 vim.cmd("hi! link NormalNC      Normal")

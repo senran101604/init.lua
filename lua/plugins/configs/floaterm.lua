@@ -3,7 +3,7 @@
 -- You might need to handle this differently based on your specific needs
 
 -- Don't enter insert mode when floaterm is loaded
-vim.g.floaterm_autoinsert = true
+vim.g.floaterm_autoinsert = false
 
 -- Set PowerShell as the terminal if the OS is Windows 10
 if vim.fn.has("win32") == 1 then
