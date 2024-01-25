@@ -4,7 +4,7 @@ local dashboard = require("alpha.themes.dashboard")
 
 local ascii_arts = require("plugins.configs.ascii_arts")
 
-dashboard.section.header.val = ascii_arts.sharingan
+dashboard.section.header.val = ascii_arts.cute_monitor
 
 dashboard.section.buttons.val = {
     dashboard.button("SPC f h", "🕒 Find History Files"),
@@ -14,7 +14,8 @@ dashboard.section.buttons.val = {
     dashboard.button( "q", "󰅚  Quit NVIM" , ":qa<CR>"),
 }
 
-dashboard.section.footer.val = "Do More by Doing Less"
+-- dashboard.section.footer.val = "Do More by Doing Less"
+dashboard.section.footer.val = "The things that are worth doing are the things that are hard."
 
 dashboard.section.header.opts.hl = "Operator"
 dashboard.section.footer.opts.hl = "String"
